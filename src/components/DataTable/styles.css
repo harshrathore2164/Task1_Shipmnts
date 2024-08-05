@@ -1,0 +1,155 @@
+/* styles.css */
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Light background color for the container */
+  border-radius: 8px; /* Rounded corners for the container */
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center; /* Center align the header */
+}
+
+.filters {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 15px;
+  margin-bottom: 20px;
+  background-color: #ffffff; /* White background for filters */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  overflow-x: auto; /* Horizontal scrolling if needed */
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 150px; /* Adjusted width to fit in one row */
+}
+
+.filter-group label {
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #ffffff; /* White background for input fields */
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Focus shadow */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: block; /* Center alignment */
+  margin: 0 auto; /* Center alignment */
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: #007bff; /* Dark blue background for headers */
+  color: #ffffff;
+  position: relative;
+}
+
+table th button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+table th button:hover {
+  color: #e1e1e1; /* Lighter color on hover */
+}
+
+table th button:focus {
+  outline: none;
+}
+
+.sort-asc::after {
+  content: "🔼";
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.sort-desc::after {
+  content: "🔽";
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table tbody tr {
+  background-color: #ffffff; /* White background for rows */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+table tbody tr:hover {
+  background-color: #e0e0e0; /* Light gray background on hover */
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .filter-group {
+    min-width: auto;
+  }
+}
