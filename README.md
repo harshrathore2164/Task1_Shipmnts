@@ -35,7 +35,7 @@ This project is a comprehensive DataTable implementation with advanced filtering
    ```bash
    npm start
 
-This will start the server and open the application in your default web browser at http://localhost:3000.
+This will start the server and open the application in your default web browser or you can also directly access the application on this site https://shipmnts-task1.netlify.app/
 
 
 ## How to Use
